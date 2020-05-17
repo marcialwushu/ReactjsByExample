@@ -11,6 +11,7 @@
 # production
 /build
 .theia
+debug.log
 
 # misc
 .DS_Store
