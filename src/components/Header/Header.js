@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './Header.css';
-import {Link} from 'react-router-dom';
+import { BrowserRouter, Link} from 'react-router-dom';
 
 
 class Header extends Component {
@@ -23,10 +23,15 @@ class Header extends Component {
 
               <div className="navbar-end">
 
-              <Link to="/" className="nav-item r-item">Home</Link>
-              <Link to="/faq" className="nav-item r-item">Feature</Link>
-              <Link to="/faq" className="nav-item r-item">About</Link>
-              <Link to="/faq" className="nav-item r-item">FAQ</Link>
+
+
+                <BrowserRouter>
+                  <Link to="/" className="navbar-item ">Home</Link>
+                  <Link to="/faq" className="navbar-item">Feature</Link>
+                  <Link to="/faq" className="navbar-item">About</Link>
+                  <Link to="/faq" className="navbar-item">FAQ</Link>
+                </BrowserRouter>
+              
 
                 
                 <div className="navbar-item">
