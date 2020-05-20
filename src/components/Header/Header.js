@@ -4,12 +4,29 @@ import { BrowserRouter, Link} from 'react-router-dom';
 
 
 class Header extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {isToggleOn: false};
+
+    this.handleClick = this.handleClick.bind(this);
+
+  }
+
+  handleClick() {
+    this.setState(prevState =>  ({
+      isToggleOn: !prevState.isToggleOn
+    }));
+  }
     render() {
+
+      let menuActive = this.state.isToggleOn ? 'is-active' : '';
+
         return ( 
           <nav className="navbar is-transparent">
             <div className="navbar-brand">
               <a className="navbar-item" href="https://bulma.io">MyCompany</a>
-              <div className="navbar-burger burger" >
+              <div className="navbar-burger burger" onClick={this.handleClick}>
                   <span></span>
                   <span></span>
                   <span></span>
@@ -21,7 +38,7 @@ class Header extends Component {
                 <div className="navbar-item has-dropdown is-hoverable"></div>
                 </div>
 
-              <div className="navbar-end">
+              <div className={'navbar-end' + menuActive} >
 
 
 
