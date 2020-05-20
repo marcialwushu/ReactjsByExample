@@ -26,7 +26,8 @@ class Header extends Component {
           <nav className="navbar is-transparent">
             <div className="navbar-brand">
               <a className="navbar-item" href="https://bulma.io">MyCompany</a>
-              <div className="navbar-burger burger" onClick={this.handleClick}>
+              
+              <div className={'navbar-burger burger '+menuActive} onClick={this.handleClick}>
                   <span></span>
                   <span></span>
                   <span></span>
@@ -38,7 +39,7 @@ class Header extends Component {
                 <div className="navbar-item has-dropdown is-hoverable"></div>
                 </div>
 
-              <div className={'navbar-end ' + menuActive} >
+              <div className={'navbar-end '+menuActive} >
 
 
 
