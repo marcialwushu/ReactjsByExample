@@ -1,3 +1,4 @@
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/2ce3c5c8286d460eaee9e94766105df9)](https://app.codacy.com/manual/marcialwushu/ReactjsByExample?utm_source=github.com&utm_medium=referral&utm_content=marcialwushu/ReactjsByExample&utm_campaign=Badge_Grade_Settings)
 [![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/marcialwushu/ReactjsByExample) 
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io#snapshot/f498170f-03a2-45cc-96ae-289defa72d48)
