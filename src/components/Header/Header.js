@@ -25,9 +25,9 @@ class Header extends Component {
         return ( 
           <nav className="navbar is-transparent">
             <div className="navbar-brand">
-              <a className="navbar-item" href="https://bulma.io">MyCompany</a>
+              <a className="navbar-item" href="https://github.com/marcialwushu/ReactjsByExample">MyCompany</a>
               
-              <div className={'navbar-burger burger '+ menuActive} onClick={this.handleClick}>
+              <div className={'navbar-burger burger is-active'+ menuActive}  onClick={this.handleClick}>
                   <span></span>
                   <span></span>
                   <span></span>
