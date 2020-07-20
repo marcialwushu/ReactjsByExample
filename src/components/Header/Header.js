@@ -5,29 +5,27 @@ import { BrowserRouter, Link} from 'react-router-dom';
 
 class Header extends Component {
 
+  // set active state for hamburger
+  state = { active : false }
+
   constructor(props) {
-    super(props);
-    this.state = {isToggleOn: false};
-
-    this.handleClick = this.handleClick.bind(this);
-
+      super(props);
+      this.handleClick = this.handleClick.bind(this);
   }
 
   handleClick() {
-    this.setState(prevState =>  ({
-      isToggleOn: !prevState.isToggleOn
-    }));
+    const { active } = this.state;
+     this.setState({ active: !active }); 
   }
     render() {
 
-      let menuActive = this.state.isToggleOn ? 'is-active' : '';
-
+    
         return ( 
           <nav className="navbar is-transparent">
             <div className="navbar-brand">
               <a className="navbar-item" href="https://github.com/marcialwushu/ReactjsByExample">MyCompany</a>
               
-              <div className={'navbar-burger burger is-active'+ menuActive}  onClick={this.handleClick}>
+              <div className={'navbar-burger burger '} active={this.state.active }  onClick={this.handleClick} >
                   <span></span>
                   <span></span>
                   <span></span>
@@ -39,14 +37,11 @@ class Header extends Component {
                 <div className="navbar-item has-dropdown is-hoverable"></div>
                 </div>
 
-              <div className={'navbar-end '+menuActive} >
-
-
-
+              <div className={'navbar-end '}  onClick={this.handleClick}>
                 <BrowserRouter>
                   <Link to="/" className="navbar-item ">Home</Link>
-                  <Link to="/faq" className="navbar-item">Feature</Link>
-                  <Link to="/faq" className="navbar-item">About</Link>
+                  <Link to="/faq" className="navbar-iem ">Feature</Link>
+                  <Link to="/faq" className="navbar-item">About</Link>                  
                   <Link to="/faq" className="navbar-item">FAQ</Link>
                 </BrowserRouter>
               
