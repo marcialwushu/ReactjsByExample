@@ -6,11 +6,12 @@ import { BrowserRouter, Link} from 'react-router-dom';
 class Header extends Component {
 
   // set active state for hamburger
-  state = { active : false }
+  
 
   constructor(props) {
       super(props);
       this.handleClick = this.handleClick.bind(this);
+      this.state = { active : false }
   }
 
   handleClick() {
@@ -25,7 +26,7 @@ class Header extends Component {
             <div className="navbar-brand">
               <a className="navbar-item" href="https://github.com/marcialwushu/ReactjsByExample">MyCompany</a>
               
-              <div className={'navbar-burger burger '} active={this.state.active }  onClick={this.handleClick} >
+              <div className={'navbar-burger burger '} active={this.state.active && 'active' }  onClick={this.handleClick} >
                   <span></span>
                   <span></span>
                   <span></span>
